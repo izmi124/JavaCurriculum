@@ -47,7 +47,7 @@ public class Qes1_13 {
 		 * 作成した変数を使ってコンソール出力する
 		 */
 		System.out.println(bnum + snum + inum + lnum);
-		System.out.println(bnum * 2);
+		System.out.println(bnum + bnum);
 		System.out.println(c + str + b);
 		System.out.println(String.format("%.0f",bnum + snum + inum + lnum + fnum + dnum));
 		System.out.println(bnum * snum * inum * lnum);
