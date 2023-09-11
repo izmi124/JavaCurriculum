@@ -24,22 +24,24 @@ public class Qes7 {
 		int i = 1;
 		// 多次元配列pointを作成する
 		int[][] point = new int[student][4];
+		// 配列sobを作成
+				String[] sob = { "英語", "数学", "理科", "社会" };
 
 		do {
 			// メッセージ文を表示する
-			System.out.print(i + "人目の『英語』の点数を入力してください ： ");
+			System.out.print(i + "人目の" + sob[0] + "の点数を入力してください ： ");
 			// 入力した整数を変数enに代入する
 			int en = num.nextInt();
 			// メッセージ文を表示する
-			System.out.print(i + "人目の『数学』の点数を入力してください ： ");
+			System.out.print(i + "人目の" + sob[1] + "の点数を入力してください ： ");
 			// 入力した整数を変数mathに代入する
 			int math = num.nextInt();
 			// メッセージ文を表示する
-			System.out.print(i + "人目の『理科』の点数を入力してください ： ");
+			System.out.print(i + "人目の" + sob[2] + "の点数を入力してください ： ");
 			// 入力した整数を変数sciに代入する
 			int sci = num.nextInt();
 			// メッセージ文を表示する
-			System.out.print(i + "人目の『社会』の点数を入力してください ： ");
+			System.out.print(i + "人目の" + sob[3] + "の点数を入力してください ： ");
 			// 入力した整数を変数socに代入する
 			int soc = num.nextInt();
 
@@ -77,8 +79,6 @@ public class Qes7 {
 		// 改行する
 		System.out.println();
 
-		// 配列sobを作成
-		String[] sob = { "英語", "数学", "理科", "社会" };
 		// 配列aveAllを作成
 		double[] aveAll = new double[4];
 

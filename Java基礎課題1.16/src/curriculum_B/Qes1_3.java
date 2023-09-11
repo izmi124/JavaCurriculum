@@ -32,10 +32,14 @@ public class Qes1_3 {
 			if (name.length() > 10) {
 				// エラー文を表示
 				System.out.println("「名前を10文字以内で入力してください」");
+				// ループを最初にもどす
+				continue;
 				// ユーザー名が0文字かnullの場合
 			} else if (name.length() == 0 || name.isEmpty()) {
 				// エラー文を表示
 				System.out.println("「名前を入力してください」");
+				// ループを最初にもどす
+				continue;
 				// 半角英数字で入力された場合	
 			} else if (Pattern.matches("^[A-Za-z0-9]+$", name)) {
 
@@ -143,13 +147,19 @@ public class Qes1_3 {
 				win = 0;
 				// 変数countを初期化
 				count = 0;
+				// scanを閉じる
+				scan.close();
+				// ループを終了する
+				break;
 
 				// 半角英数字以外でユーザー名が入力された場合
 			} else {
 				// エラー文を表示
 				System.out.println("「半角英数字のみで名前を入力してください」");
+				// ループを最初にもどす
+				continue;
 			}
-
+			
 		}
 
 	}
