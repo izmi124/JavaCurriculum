@@ -1,6 +1,7 @@
 package statusmain;
 
-// 使用するクラスを宣言する
+//使用するクラスを宣言する
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -26,16 +27,30 @@ public class Statusmain {
 
 		// Scannerクラスのインスタンスを生成する
 		Scanner scan = new Scanner(System.in);
-		// 入力値を取得する
-		String adventurer = scan.nextLine();
 
-		// メッセージ文を表示する
-		System.out.println("こんにちは 「 " + adventurer + " 」 さん");
-		// statusメソッドを表示する
-		st.status();
+		// 無限ループを作成する
+		while (true) {
 
-		// scanを閉じる
-		scan.close();
+			// 入力値を取得する
+			String adventurer = scan.nextLine();
+
+			// 入力値がnull以外かつ空文字ではない場合
+			if (Objects.nonNull(adventurer) && adventurer.length() >= 1) {
+
+				// メッセージ文を表示する
+				System.out.println("こんにちは 「 " + adventurer + " 」 さん");
+				// statusメソッドを表示する
+				st.status();
+
+				// scanを閉じる
+				scan.close();
+
+				// ループを抜ける
+				break;
+
+			}
+
+		}
 
 	}
 
