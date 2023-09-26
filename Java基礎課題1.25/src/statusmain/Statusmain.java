@@ -30,7 +30,7 @@ public class Statusmain {
 
 		// 無限ループを作成する
 		while (true) {
-
+			
 			// 入力値を取得する
 			String adventurer = scan.nextLine();
 
