@@ -12,6 +12,8 @@ import prefectures.Prefectures;
 
 public class Japan {
 	public static void main(String[] args) {
+		// メッセージ文を表示
+		System.out.println("昇順でソートする場合は100、降順でソートする場合は200をコンソールに記述してください");
 
 		// スキャナーのオブジェクトを作成する
 		Scanner scan = new Scanner(System.in);
@@ -19,10 +21,10 @@ public class Japan {
 		// 入力値を配列にして代入する
 		String[] number = scan.nextLine().split("[^0-9]");
 
-		// もしnullが代入されていた場合
-		if (Objects.isNull(number)) {
+		// もしnullか空文字が代入されていた場合
+		if (Objects.isNull(number) || Arrays.asList(number).contains("")) {
 			// メッセージ文を表示
-			System.out.println("nullです");
+			System.out.println("nullか空白です");
 			// スキャナーを閉じる
 			scan.close();
 			// 処理を中断する
